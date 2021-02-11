@@ -6,7 +6,11 @@ spec:
   rules:
   - http:
       paths:
-      - path: /testepath
+      - path: /app1
         backend:
-          serviceName: external-service
+          serviceName: app1-service
+          servicePort: 80
+      - path: /app2
+        backend:
+          serviceName: app2-service
           servicePort: 80
