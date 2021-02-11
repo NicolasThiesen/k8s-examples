@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cat-deployment
+  namespace: cat
+spec:
+  selector:
+    matchLabels:
+      run: my-nginx
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: cat
+    spec:
+      containers:
+      - name: cat
+        image: local/cat-website
+        ports:
+        - containerPort: 80
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: monkey-deployment
+  namespace: monkey
+spec:
+  selector:
+    matchLabels:
+      run: monkey
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: monkey
+    spec:
+      containers:
+      - name: monkey
+        image: local/monkey-website
+        ports:
+        - containerPort: 80
