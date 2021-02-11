@@ -5,7 +5,14 @@
 - You must already deployed nginx ingress contreller
 ## To run
 
-- First step build the docker images:
+- First step create namespaces:
+
+```shell
+kubectl create namespace cat
+kubectl create namespace monkey
+```
+
+- Build the docker images
 
 ```shell
 docker build Cat-Website -t local/cat-website
@@ -27,5 +34,5 @@ kubectl apply -f service.yaml
 - Create a ingress
 
 ```shell
-kubectl apply -f service.yaml
+kubectl apply -f ingress.yaml
 ```
