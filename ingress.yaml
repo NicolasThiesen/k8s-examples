@@ -6,11 +6,11 @@ spec:
   rules:
   - http:
       paths:
-      - path: /app1
+      - path: /cat
         backend:
-          serviceName: app1-service
+          serviceName: service-cat
           servicePort: 80
-      - path: /app2
+      - path: /monkey
         backend:
-          serviceName: app2-service
+          serviceName: service-monkey
           servicePort: 80
