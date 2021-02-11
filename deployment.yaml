@@ -18,6 +18,7 @@ spec:
       containers:
       - name: cat
         image: local/cat-website
+        imagePullPolicy: Never
         ports:
         - containerPort: 80
 
@@ -42,5 +43,6 @@ spec:
       containers:
       - name: monkey
         image: local/monkey-website
+        imagePullPolicy: Never
         ports:
         - containerPort: 80
