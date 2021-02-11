@@ -4,14 +4,11 @@ metadata:
   name: cat-deployment
   namespace: cat
 spec:
-  selector:
-    matchLabels:
-      run: my-nginx
   replicas: 2
   template:
     metadata:
       labels:
-        run: cat
+        app: cat
     spec:
       containers:
       - name: cat
@@ -26,14 +23,11 @@ metadata:
   name: monkey-deployment
   namespace: monkey
 spec:
-  selector:
-    matchLabels:
-      run: monkey
   replicas: 2
   template:
     metadata:
       labels:
-        run: monkey
+        app: monkey
     spec:
       containers:
       - name: monkey
