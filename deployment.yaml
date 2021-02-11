@@ -28,7 +28,7 @@ metadata:
   name: monkey-deployment
   namespace: monkey
   labels:
-    monkey
+    app: monkey
 spec:
   selector:
     matchLabels:
