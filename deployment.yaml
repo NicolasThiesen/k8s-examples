@@ -3,7 +3,12 @@ kind: Deployment
 metadata:
   name: cat-deployment
   namespace: cat
+  labels:
+    app: cat
 spec:
+  selector:
+    matchLabels:
+      app: cat
   replicas: 2
   template:
     metadata:
@@ -22,7 +27,12 @@ kind: Deployment
 metadata:
   name: monkey-deployment
   namespace: monkey
+  labels:
+    monkey
 spec:
+  selector:
+    matchLabels:
+      app: monkey
   replicas: 2
   template:
     metadata:
