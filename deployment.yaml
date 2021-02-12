@@ -46,3 +46,28 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 80
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: main-deployment
+  namespace: mainpage
+  labels:
+    app: main
+spec:
+  selector:
+    matchLabels:
+      app: main
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: main
+    spec:
+      containers:
+      - name: main
+        image: local/mainpage
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
