@@ -10,6 +10,7 @@
 ```shell
 kubectl create namespace cat
 kubectl create namespace monkey
+kubectl create namespace mainpage
 ```
 
 - Build the docker images
@@ -17,6 +18,7 @@ kubectl create namespace monkey
 ```shell
 docker build Cat-Website -t local/cat-website
 docker build Monkey-Website -t local/monkey-website
+docker build Main-Page -t local/mainpage
 ```
 
 - Create a deployment

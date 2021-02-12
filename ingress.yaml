@@ -6,6 +6,10 @@ spec:
   rules:
   - http:
       paths:
+      - path: /
+        backend:
+          serviceName: service-main
+          servicePort: 80
       - path: /cat
         backend:
           serviceName: service-cat
