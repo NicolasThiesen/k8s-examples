@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: cat
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -34,7 +34,7 @@ spec:
   selector:
     matchLabels:
       app: monkey
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
