@@ -30,7 +30,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: service-main
-  namespace: main
+  namespace: mainpage
 spec:
   selector:
     app: main-app
