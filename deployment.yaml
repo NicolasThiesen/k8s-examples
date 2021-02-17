@@ -24,7 +24,6 @@ spec:
       containers:
       - name: cat
         image: 411470295704.dkr.ecr.us-east-1.amazonaws.com/cat-website
-        imagePullPolicy: Never
         ports:
         - containerPort: 80
 
@@ -49,7 +48,6 @@ spec:
       containers:
       - name: monkey
         image: 411470295704.dkr.ecr.us-east-1.amazonaws.com/monkey-website
-        imagePullPolicy: Never
         ports:
         - containerPort: 80
 
@@ -74,6 +72,5 @@ spec:
       containers:
       - name: main
         image: 411470295704.dkr.ecr.us-east-1.amazonaws.com/mainpage
-        imagePullPolicy: Never
         ports:
         - containerPort: 80
