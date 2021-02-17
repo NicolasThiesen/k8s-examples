@@ -16,8 +16,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: main-namespace
-  namespace: monkey
+  name: service-monkey
+  namespace: main-namespace
 spec:
   selector:
     app: monkey-app
