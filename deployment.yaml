@@ -1,8 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: main-namespace
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cat-deployment
-  namespace: cat
+  namespace: main-namespace
   labels:
     app: cat
 spec:
@@ -17,7 +23,7 @@ spec:
     spec:
       containers:
       - name: cat
-        image: local/cat-website
+        image: 411470295704.dkr.ecr.us-east-1.amazonaws.com/cat-website
         imagePullPolicy: Never
         ports:
         - containerPort: 80
@@ -27,7 +33,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: monkey-deployment
-  namespace: monkey
+  namespace: main-namespace
   labels:
     app: monkey
 spec:
@@ -42,7 +48,7 @@ spec:
     spec:
       containers:
       - name: monkey
-        image: local/monkey-website
+        image: 411470295704.dkr.ecr.us-east-1.amazonaws.com/monkey-website
         imagePullPolicy: Never
         ports:
         - containerPort: 80
@@ -52,7 +58,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: main-deployment
-  namespace: mainpage
+  namespace: main-namespace
   labels:
     app: main
 spec:
@@ -67,7 +73,7 @@ spec:
     spec:
       containers:
       - name: main
-        image: local/mainpage
+        image: 411470295704.dkr.ecr.us-east-1.amazonaws.com/mainpage
         imagePullPolicy: Never
         ports:
         - containerPort: 80

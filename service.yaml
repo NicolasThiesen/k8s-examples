@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: service-cat
-  namespace: cat
+  namespace: main-namespace
 spec:
   selector:
     app: cat-app
@@ -10,12 +10,13 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+  type: NodePort
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: service-monkey
+  name: main-namespace
   namespace: monkey
 spec:
   selector:
@@ -24,13 +25,14 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+  type: NodePort
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: service-main
-  namespace: mainpage
+  namespace: main-namespace
 spec:
   selector:
     app: main-app
@@ -38,3 +40,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+  type: NodePort
