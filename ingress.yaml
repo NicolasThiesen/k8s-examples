@@ -6,7 +6,16 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: instance
+    # Healthcheck
+    alb.ingress.kubernetes.io/aws-load-balancer-healthcheck-protocol: HTTP
+    alb.ingress.kubernetes.io/aws-load-balancer-healthcheck-port: traffic-port
+    alb.ingress.kubernetes.io/aws-load-balancer-healthcheck-path: /usermgmt/health-status
+    alb.ingress.kubernetes.io/aws-load-balancer-healthcheck-interval: '15'
+    alb.ingress.kubernetes.io/aws-load-balancer-healthcheck-timeout: '5'
+    alb.ingress.kubernetes.io/success-codes: "200"
+    alb.ingress.kubernetes.io/aws-load-balancer-healthcheck-healthy-threshold: "2"
+    alb.ingress.kubernetes.io/aws-load-balancer-healthcheck-unhealthy-threshold: "2"
+
 spec:
   rules:
   - http:
