@@ -1,8 +1,11 @@
 # K8S example
 
-## Pre-requisites
-- You must to pre intalled docker and kubernetes
-- You must already deployed nginx ingress contreller
+## Prerequisites
+- You must to intalled docker.
+- You must to intalled kubernetes ( kubectl is enough ).
+- You must to installed eksctl.
+- You must to installed helm.
+- You must already deployed [the cluster on AWS]().
 ## To run
 
 - Build the docker images

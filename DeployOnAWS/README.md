@@ -24,7 +24,6 @@ aws iam create-policy --policy-name AWSLoadBalancerControllerIAMPolicy --policy-
 - Create a IAM role and ServiceAccount
 
 ```shell
-
 eksctl create iamserviceaccount --cluster my-cluster --namespace kube-system --name aws-load-balancer-controller --attach-policy-arn arn:aws:iam::${ACCOUNT_ID}:policy/AWSLoadBalancerControllerIAMPolicy --override-existing-serviceaccounts --approve
 ```
 
