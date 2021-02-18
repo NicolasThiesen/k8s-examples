@@ -5,7 +5,7 @@
 - You must to intalled kubernetes ( kubectl is enough ).
 - You must to installed eksctl.
 - You must to installed helm.
-- You must already deployed [the cluster on AWS]().
+- You must already deployed [the cluster on AWS](https://github.com/NicolasThiesen/k8s-examples/tree/master/DeployOnAWS).
 ## To run
 
 - Build the docker images
