@@ -20,10 +20,6 @@ spec:
   rules:
   - http:
       paths:
-      - path: /
-        backend:
-          serviceName: service-main
-          servicePort: 80
       - path: /cat
         backend:
           serviceName: service-cat
@@ -31,4 +27,8 @@ spec:
       - path: /monkey
         backend:
           serviceName: service-monkey
+          servicePort: 80
+      - path: /
+        backend:
+          serviceName: service-main
           servicePort: 80

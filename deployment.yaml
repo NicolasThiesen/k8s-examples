@@ -10,16 +10,16 @@ metadata:
   name: cat-deployment
   namespace: main-namespace
   labels:
-    app: cat
+    app: cat-app
 spec:
   selector:
     matchLabels:
-      app: cat
-  replicas: 1
+      app: cat-app
+  replicas: 2
   template:
     metadata:
       labels:
-        app: cat
+        app: cat-app
     spec:
       containers:
       - name: cat
@@ -34,16 +34,16 @@ metadata:
   name: monkey-deployment
   namespace: main-namespace
   labels:
-    app: monkey
+    app: monkey-app
 spec:
   selector:
     matchLabels:
-      app: monkey
-  replicas: 1
+      app: monkey-app
+  replicas: 2
   template:
     metadata:
       labels:
-        app: monkey
+        app: monkey-app
     spec:
       containers:
       - name: monkey
@@ -58,19 +58,19 @@ metadata:
   name: main-deployment
   namespace: main-namespace
   labels:
-    app: main
+    app: main-app
 spec:
   selector:
     matchLabels:
-      app: main
-  replicas: 1
+      app: main-app
+  replicas: 2
   template:
     metadata:
       labels:
-        app: main
+        app: main-app
     spec:
       containers:
-      - name: main
+      - name: main-app
         image: 411470295704.dkr.ecr.us-east-1.amazonaws.com/mainpage
         ports:
         - containerPort: 80

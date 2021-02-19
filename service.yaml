@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: service-cat
   namespace: main-namespace
+  labels: 
+    app: cat-app
 spec:
   selector:
     app: cat-app
@@ -18,6 +20,8 @@ kind: Service
 metadata:
   name: service-monkey
   namespace: main-namespace
+  labels: 
+    app: monkey-app
 spec:
   selector:
     app: monkey-app
@@ -33,6 +37,8 @@ kind: Service
 metadata:
   name: service-main
   namespace: main-namespace
+  labels: 
+    app: main-app
 spec:
   selector:
     app: main-app
