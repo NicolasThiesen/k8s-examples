@@ -16,7 +16,7 @@ docker build Monkey-Website -t local/monkey-website
 docker build Main-Page -t local/mainpage
 ```
 - Push into your repository
-- Update your repo on `image:` in deployment.yaml file
+- Update your repo on `image:` in `deployment.yaml` file
 - Create a deployment
 
 ```shell
